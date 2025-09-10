@@ -15,7 +15,7 @@ services:
       - NUGET_FALLBACK_PACKAGES=/.nuget/fallbackpackages
     volumes:
       - C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp:/app:rw
-      - C:\Downloads\DockerIntroduction\BlogApp\BlogApp:/src:rw
+      - C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp:/src:rw
       - C:\Users\Anđelija\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\Anđelija\.nuget\packages:/.nuget/packages:ro
       - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/.nuget/fallbackpackages:ro

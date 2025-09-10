@@ -84,7 +84,6 @@ C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\staticw
 C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\staticwebassets.development.json
 C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\BlogApp.csproj.Up2Date
 C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\BlogApp.dll
 C:\Downloads\DockerIntroduction\BlogApp\BlogApp\BlogApp\obj\Debug\net9.0\refint\BlogApp.dll

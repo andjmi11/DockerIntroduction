@@ -19,15 +19,7 @@ services:
       - sqlserver
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-
-  blogapp:
-    container_name: blogapp
-    build:
-      context: ../BlogApp/BlogApp/BlogApp
-      dockerfile: Dockerfile
-    ports:
-      - "8081:8080"
-    depends_on:
-      - blogapi
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+networks:
+  default:
+      external: true
+      name: blog-network

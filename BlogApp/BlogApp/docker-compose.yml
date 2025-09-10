@@ -1,14 +1,16 @@
 services:
   blogapp:
-    build:
-      context: .
-      dockerfile: BlogApp/Dockerfile
     container_name: blogapp
+    build:
+      context: ./BlogApp   
+      dockerfile: Dockerfile
     ports:
-      - "9191:9090"
-    depends_on:
-      - blogapi
+      - "8081:8080"
     environment:
-      ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: "http://+:9090"
-    restart: unless-stopped
+      - API_URL=http://blogapi:8080
+      - ASPNETCORE_ENVIRONMENT=Development
+networks:
+  default:
+      external: true
+      name: blog-network
+
