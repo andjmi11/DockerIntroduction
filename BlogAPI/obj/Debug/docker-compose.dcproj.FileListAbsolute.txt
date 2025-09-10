@@ -1,0 +1,1 @@
+C:\Downloads\DockerIntroduction\BlogAPI\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

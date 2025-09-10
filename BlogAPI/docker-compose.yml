@@ -1,0 +1,33 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+
+  blogapi:
+    container_name: blogapi
+    build:
+      context: ./BlogAPI
+      dockerfile: Dockerfile
+    ports:
+      - "9090:8080"
+    depends_on:
+      - sqlserver
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  blogapp:
+    container_name: blogapp
+    build:
+      context: ../BlogApp/BlogApp/BlogApp
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    depends_on:
+      - blogapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

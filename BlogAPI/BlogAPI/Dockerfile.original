@@ -1,0 +1,22 @@
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
+
+COPY ["BlogAPI.csproj", "./"]
+RUN dotnet restore "BlogAPI.csproj"
+
+COPY . .
+RUN dotnet build "BlogAPI.csproj" -c Release -o /app/build
+RUN dotnet publish "BlogAPI.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# Runtime stage sa SDK (mora za dotnet-ef)
+FROM mcr.microsoft.com/dotnet/sdk:9.0
+WORKDIR /app
+COPY --from=build /app/publish .
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
+
+EXPOSE 8080
+RUN dotnet tool install --global dotnet-ef --version 9.0.8
+ENV PATH="$PATH:/root/.dotnet/tools"
+ENTRYPOINT ["./entrypoint.sh"]

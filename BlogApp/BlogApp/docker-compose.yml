@@ -1,0 +1,14 @@
+services:
+  blogapp:
+    build:
+      context: .
+      dockerfile: BlogApp/Dockerfile
+    container_name: blogapp
+    ports:
+      - "9191:9090"
+    depends_on:
+      - blogapi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://+:9090"
+    restart: unless-stopped
