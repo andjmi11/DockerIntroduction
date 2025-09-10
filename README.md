@@ -1,4 +1,4 @@
-# Uvod u Dcoker
+# Uvod u Docker
 ## Sadržaj
 
 1. [Šta je Docker?](#šta-je-docker)
@@ -131,8 +131,7 @@ Docker omogućava aplikacijama da se pokreću u **izolovanim, laganim kontejneri
 **Primer jednostavnog Dockerfile-a za .NET  aplikaciju:**
 
 ```dockerfile
-# Bazni imidž sa .NET 7 SDK za build
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 
 # Postavljanje radnog direktorijuma
 WORKDIR /app
@@ -146,7 +145,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Bazni imidž za runtime
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
 
