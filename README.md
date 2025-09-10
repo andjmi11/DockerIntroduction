@@ -10,7 +10,8 @@
 
 ## Šta je Docker?
 
-Docker je platforma otvorenog koda koja omogućava programerima da automatizuju proces razvijanja, isporuke i pokretanja aplikacija unutar kontejnera. Kontejneri su lagaai, prenosiva i izolovana okruženja koja sadrže sve potrebne komponente za rad aplikacije, uključujući kod, biblioteke, zavisnosti i sistemske alate. To znači da aplikacija pokrenuta u Docker kontejneru radi isto bez obzira na okruženje – lokalni računar, serverski klaster ili cloud.
+Docker je platforma otvorenog koda koja omogućava programerima da automatizuju proces razvoja, isporuke i pokretanja aplikacija unutar kontejnera. Kontejneri su lagana, prenosiva i izolovana okruženja koaj sadrže sve potrebne komponente za rad aplikacije, uklljučujući kod, biblioteke, zavisnosti i sistemske alate. To znači da aplikacija pokrenuta u Docker kontejneru radi isto bez obzira na okruženje - lokalni računar, serverski klaster ili cloud.
+
 ---
 
 ### Osnovna ideja Docker-a
